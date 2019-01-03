@@ -1,0 +1,42 @@
+{
+  "name": "smarthome",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "coverage": "nyc npm test && nyc report --reporter=html",
+    "format": "prettier --write \"**/*.{js,json}\"",
+    "lint": "eslint .",
+    "test": "ava --verbose",
+    "test:watch": "npm test -- --watch"
+  },
+  "author": "Benjamin Kroeger <benjamin.kroeger@gmail.com>",
+  "license": "Apache-2.0",
+  "nyc": {
+    "include": [
+      "lib/**.js"
+    ],
+    "exclude": [
+      "**/*.test.js"
+    ]
+  },
+  "devDependencies": {
+    "ava": "1.0.1",
+    "eslint": "5.11.1",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "3.3.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "nyc": "13.1.0",
+    "prettier": "1.15.3"
+  },
+  "dependencies": {
+    "binrpc": "3.2.2",
+    "homematic-xmlrpc": "1.0.2",
+    "phin": "3.2.1"
+  }
+}
