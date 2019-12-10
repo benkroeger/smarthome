@@ -1,22 +1,37 @@
-// node core modules
+'use strict';
 
-// third-party modules
+// node core
 
-// internal modules
+// third-party
 
-const { NODE_ENV } = process.env;
-
-const isProduction = NODE_ENV === 'production';
+// internal
 
 module.exports = {
-  plugins: ['prettier'],
-  extends: ['airbnb-base', 'prettier'],
   parserOptions: {
     sourceType: 'script',
+    ecmaFeatures: {
+      jsx: false,
+    },
   },
+  env: {
+    jest: true,
+    node: true,
+  },
+  plugins: ['prettier'],
+  extends: ['airbnb-base', 'prettier'],
   rules: {
-    'no-console': isProduction ? 'error' : 'off',
-    'no-debugger': isProduction ? 'error' : 'off',
-    'prettier/prettier': 'warn',
+    strict: ['error', 'safe'],
+    'prettier/prettier': 'error',
+    // disallow dangling underscores in identifiers
+    // https://eslint.org/docs/rules/no-underscore-dangle
+    'no-underscore-dangle': [
+      'error',
+      {
+        allow: ['_id'],
+        allowAfterThis: false,
+        allowAfterSuper: false,
+        enforceInMethodNames: true,
+      },
+    ],
   },
 };
