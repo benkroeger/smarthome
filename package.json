@@ -18,22 +18,22 @@
   "author": "Benjamin Kroeger <benjamin.kroeger@gmail.com>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@roarr/cli": "^3.1.0",
-    "coveralls": "^3.0.9",
-    "eslint": "^6.7.2",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "^3.1.1",
-    "husky": "^3.1.0",
-    "jest": "^24.9.0",
-    "lint-staged": "^9.5.0",
-    "prettier": "^1.19.1"
+    "@roarr/cli": "^3.2.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
   },
   "dependencies": {
     "binrpc": "^3.3.1",
     "fritzapi": "^0.10.7",
     "homematic-xmlrpc": "1.0.2",
-    "phin": "^3.4.1"
+    "phin": "^3.5.0"
   }
 }
